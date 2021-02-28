@@ -2,4 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello world, your are at Vibe's Index")
+    name = "Titus"
+    return render(request,'vibe/index.html',{'name':name})

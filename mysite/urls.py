@@ -2,6 +2,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('/vibe',include('vibe.urls')),
+    path('vibe/',include('vibe.urls')),
     path('admin/', admin.site.urls),
 ]
