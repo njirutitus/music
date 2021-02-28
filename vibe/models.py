@@ -9,10 +9,16 @@ class Album(models.Model):
     album_log = models.FileField()
     is_favorite = models.BooleanField(default=False)
 
+    def __str__(self) -> str:
+        return self.album_title
+
 class Song(models.Model):
     album = models.ForeignKey(Album,on_delete=models.CASCADE)
     song_title = models.CharField(max_length=500)
     audio_file = models.FileField()
     is_favorite = models.BooleanField(default=False)
+
+    def __str__(self) -> str:
+        return self.song_title
     
 
